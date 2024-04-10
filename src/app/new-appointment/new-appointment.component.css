@@ -1,0 +1,15 @@
+.form-control{
+    height: 60px;
+}
+.labstyle{
+    font-weight: bold;
+    height: 30px;
+    font-size: 20px;
+}
+.form-check-input{
+    height: 20px;
+}
+.form-check-label{
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,0 +1,100 @@
+<form class="container border rounded " (ngSubmit)="bookappointment()" #myForm="ngForm">
+
+  <div class=" row text-center" style="position: relative; top: 0;">
+    <div class="col-md-12" style="font-size: 40px ;font-weight: bold;">
+      New Appointment
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 10px;">
+    <div class="col-md-7">
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="name">Enter Name</label>
+          <input type="text" class="form-control height " id="name" placeholder="Enter Name"
+            [(ngModel)]="appointmentObj.name" name="name">
+        </div>
+      </div>
+      <div>
+        <div class=" form-group">
+          <label class="labstyle" for="mobile">Enter Mobile No</label>
+          <input type="tel" class="form-control" id="mobile" placeholder="Enter Mobile No"
+            [(ngModel)]="appointmentObj.mobileNo" name="mobileNo">
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="age">Enter Age</label>
+          <input type="number" class="form-control" id="age" placeholder="Enter Age" [(ngModel)]="appointmentObj.age"
+            name="age">
+        </div>
+      </div>
+      <div style="margin-bottom: 15px;">
+        <div class="form-group">
+          <label class="labstyle" for="city">Enter City</label>
+          <input type="text" class="form-control" id="city" placeholder="Enter City" [(ngModel)]="appointmentObj.city"
+            name="city">
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="firstTime" [(ngModel)]="appointmentObj.isFirstVisit"
+              name="isFirstVisit">
+            <label class="form-check-label" for="firstTime">Is First Time</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="appointmentDate">Enter Appointment Date</label>
+          <input type="date" class="form-control" id="appointmentDate"
+            placeholder="Mention Appointment from 9:00 am to 9:00 pm" [(ngModel)]="appointmentObj.appointmentDate"
+            name="appointmentDate">
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="narration">Enter Narration</label>
+          <textarea class="form-control" id="narration" rows="3"
+            placeholder="Enter any specific symptoms, concerns, or questions you have for the doctor"
+            [(ngModel)]="appointmentObj.naration" name="naration"></textarea>
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="gender">Gender</label>
+          <select class="form-control" id="gender" [(ngModel)]="appointmentObj.gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label class="labstyle" for="appointmentTime">Enter Appointment Time</label>
+          <input type="time" class="form-control" id="appointmentTime" [(ngModel)]="appointmentObj.appointmentTime"
+            name="appointmentTime">
+        </div>
+      </div>
+      <div class="col-md-7 " style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary btn-block">Book Appointment</button>
+      </div>
+    </div>
+    <!-- col-md-7 -->
+    <div class="col-md-5 mb-3 mt-3 ">
+      <img src="assets/Doctor Appoint.jpg" alt="image" class="img-fluid" style="height: 100%;">
+    </div>
+    <!-- col-md-5 -->
+  </div>
+  <!-- row -->
+</form>
+<!-- form -->
+
+<!-- -------------------------------------------------------------------------------------------------------------  -->
+
+<!-- The <div class="form-group"> wraps both the <label> and <input> elements. -->
+<!-- So, col-md-7 means that the element will occupy half of the available columns within its row on medium-sized devices and above. -->
+<!-- The form-check class is applied to a container that wraps both the input element and its corresponding label. This class provides styling for the entire checkbox or radio button group.
+  The form-check-input class is applied to the input element itself. This class ensures that the checkbox or radio button is styled appropriately -->
+<!-- rows="3" specifies the initial number of visible text rows in the textarea -->
+<!-- to bind the value of the <select> element to appointmentObj.gender using [(ngModel)]. However, the <option> elements don't have a name attribute. Instead, you should use the value attribute to specify the value associated with each option. Here's how you can modify your HTML template: -->
